@@ -40,6 +40,16 @@ public class GameTime : MonoBehaviour
             hours += 1;
             if(hours > 12)
             {
+                if (am)
+                {
+                    am = false;
+                    AMPM = "PM";
+                }
+                else
+                {
+                    am = true;
+                    AMPM = "AM";
+                }
                 hours = 1;
             }
         }
