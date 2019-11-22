@@ -13,16 +13,21 @@ public class GameTime : MonoBehaviour
         minutes = 0;
     }
 
+    void incrementTime(int i)
+    {
+        minutes += i;
+        if (minutes >= 60)
+        {
+            hours += 1;
+            minutes -= 60;
+        }
+    }
+
     void updateTime(bool i, bool h)
     {
         if (i)
         {
-            minutes += 15;
-            if (minutes == 60)
-            {
-                hours += 1;
-                minutes = 0;
-            }
+            incrementTime(15);
         }
         if (h)
         {
