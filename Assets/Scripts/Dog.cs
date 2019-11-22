@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dog : MonoBehaviour
 {
@@ -9,4 +10,9 @@ public class Dog : MonoBehaviour
     public int fatigue = 0;
     public int contenetment = 0;
     public int bathroom = 0;
+    public Image hungerImg;
+    public Image loneImg;
+    public Image fatigueImg;
+    public Image contentImg;
+    public Image bathroomImg;
 }
