@@ -1,2 +1,14 @@
 tree("Root")
 	Succeed
+tree("Tired")
+	Succeed
+tree("Hungry")
+	Succeed
+tree("Lonely")	
+	Succeed
+tree("Play")
+	Succeed
+tree("Out")
+	Succeed
+tree("Noise")
+	Succeed
