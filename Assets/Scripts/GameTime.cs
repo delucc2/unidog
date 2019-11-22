@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Time : MonoBehaviour
+public class GameTime : MonoBehaviour
 {
     int hours;
     int minutes;
     // Start is called before the first frame update
     void Start()
     {
-        hours = 12;
+        hours = 7;
         minutes = 0;
     }
 
