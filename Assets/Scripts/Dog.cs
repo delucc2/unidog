@@ -21,5 +21,9 @@ public class Dog : MonoBehaviour
     private void Update()
     {
         hungerImg.transform.localScale = new Vector3(minSize,Mathf.Lerp(minSize, maxSize,  hunger / 100), minSize);
+        loneImg.transform.localScale = new Vector3(minSize, Mathf.Lerp(minSize, maxSize, loneliness / 100), minSize);
+        fatigueImg.transform.localScale = new Vector3(minSize, Mathf.Lerp(minSize, maxSize, fatigue / 100), minSize);
+        contentImg.transform.localScale = new Vector3(minSize, Mathf.Lerp(minSize, maxSize, contenetment / 100), minSize);
+        bathroomImg.transform.localScale = new Vector3(minSize, Mathf.Lerp(minSize, maxSize, bathroom / 100), minSize);
     }
 }
