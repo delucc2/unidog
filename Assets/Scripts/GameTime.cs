@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour
 {
     int hours;
     int minutes;
+    string currTime;
+    string AMPM = "AM";
+    bool am = true;
+    public Text CanvasArea; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,9 @@ public class GameTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        System.TimeSpan current = System.TimeSpan.FromMinutes(hours * 60 + minutes);
+        currTime = current.ToString();
+        currTime = currTime.Remove(5);
+        CanvasArea.text = string.Format("{0} {1} ", currTime, AMPM);
     }
 }
