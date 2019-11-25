@@ -35,33 +35,42 @@ public class PlayerInput : MonoBehaviour
                 switch (a)
                 {
                     case 'f':
-                        Debug.Log("Put food in the dog bowl");
+                        Debug.Log("Put food in Doug's bowl");
                         doug.fillFoodBowl();
+                        clock.updateTime(0);
                         return;
                     case 't':
-                        Debug.Log("Gave the dog a treat");
+                        Debug.Log("Gave Doug a treat");
+                        clock.updateTime(0);
                         return;
                     case 'k':
-                        Debug.Log("Threw the stick");
+                        Debug.Log("Threw the stick past Doug");
+                        clock.updateTime(0);
                         return;
                     case 'p':
-                        Debug.Log("Pet the dog");
+                        Debug.Log("Pet Doug");
+                        clock.updateTime(0);
                         return;
                     case 'b':
-                        Debug.Log("Rubbed the dog's belly");
+                        Debug.Log("Rubbed Doug's belly");
+                        clock.updateTime(0);
                         return;
                     case 'w':
-                        Debug.Log("Took the dog for a walk");
+                        Debug.Log("Took Doug for a walk");
+                        clock.updateTime(0);
                         return;
                     case 'l':
-                        Debug.Log("Left the dog alone");
+                        Debug.Log("Left Doug alone");
+                        clock.updateTime(0);
                         return;
                     case 'g':
                         Debug.Log("Went to work");
+                        clock.updateTime(0);
                         lonely.goingToWork();
                         return;
                     case 'a':
                         Debug.Log("Return home from work");
+                        clock.updateTime(0);
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");
@@ -77,6 +86,7 @@ public class PlayerInput : MonoBehaviour
                         return;
                     case 's':
                         Debug.Log("Played a strange sound");
+                        clock.updateTime(0);
                         return;
                     default:
                         return;
