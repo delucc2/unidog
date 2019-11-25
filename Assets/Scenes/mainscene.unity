@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: f26a62fe21d16094e908cef8bb68ce4f,
         type: 3}
       propertyPath: m_Name
-      value: 12226_Dog_v2_l3
+      value: Dog
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f26a62fe21d16094e908cef8bb68ce4f,
         type: 3}
@@ -898,7 +898,7 @@ MonoBehaviour:
   - isFoldout: 1
     breakPoints: 
     breakPointStatuses: 
-    collapsedLines: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+    collapsedLines: 0400000006000000080000000c0000000e0000000f000000110000001300000002000000010000001200000015000000180000001b0000001e000000
     btScript: 
 --- !u!114 &1041394867
 MonoBehaviour:
@@ -915,15 +915,27 @@ MonoBehaviour:
   hunger: 0
   loneliness: 0
   fatigue: 0
-  contenetment: 0
+  contentment: 100
   bathroom: 0
   minSize: 2.5
   maxSize: 25
   hungerImg: {fileID: 2146848901}
-  loneImg: {fileID: 0}
-  fatigueImg: {fileID: 0}
-  contentImg: {fileID: 0}
-  bathroomImg: {fileID: 0}
+  loneImg: {fileID: 2147259846}
+  fatigueImg: {fileID: 1757105264}
+  contentImg: {fileID: 473331477}
+  bathroomImg: {fileID: 894709633}
+--- !u!114 &1041394869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e6df08bd3990d47ab44569f2199d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084310727
 GameObject:
   m_ObjectHideFlags: 0

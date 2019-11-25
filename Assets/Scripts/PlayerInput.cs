@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    Dog doug;
+    GameTime clock;
+    TiredTasks tired;
+    LonelyTasks lonely;
+    PlayTasks play;
+    HungryTasks hungry;
+    GoOutTasks go_out;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        doug = GameObject.Find("Dog").GetComponent<Dog>();
+        clock = gameObject.GetComponent<GameTime>();
+
+        tired = doug.GetComponent<TiredTasks>();
+        lonely = doug.GetComponent<LonelyTasks>();
+        play = doug.GetComponent<PlayTasks>();
+        hungry = doug.GetComponent<HungryTasks>();
+        go_out = doug.GetComponent<GoOutTasks>();
     }
 
     // Update is called once per frame
@@ -21,6 +36,7 @@ public class PlayerInput : MonoBehaviour
                 {
                     case 'f':
                         Debug.Log("Put food in the dog bowl");
+                        doug.fillFoodBowl();
                         return;
                     case 't':
                         Debug.Log("Gave the dog a treat");
@@ -42,15 +58,18 @@ public class PlayerInput : MonoBehaviour
                         return;
                     case 'g':
                         Debug.Log("Went to work");
+                        lonely.goingToWork();
                         return;
                     case 'a':
                         Debug.Log("Return home from work");
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");
+                        clock.incrementTime(15);
                         return;
                     case 'h':
                         Debug.Log("Wait one hour");
+                        clock.incrementTime(60);
                         return;
                     case 'd':
                         Debug.Log("Wait one day");

@@ -10,16 +10,19 @@ public class GameTime : MonoBehaviour
     string currTime;
     string AMPM = "AM";
     bool am = true;
-    public Text CanvasArea; 
+    public Text CanvasArea;
+    Dog doug;
     
     // Start is called before the first frame update
     void Start()
     {
         hours = 7;
         minutes = 0;
+
+        doug = GameObject.Find("Dog").GetComponent<Dog>();
     }
 
-    void incrementTime(int i)
+    public void incrementTime(int i)
     {
         minutes += i;
         if (minutes >= 60)
@@ -27,6 +30,18 @@ public class GameTime : MonoBehaviour
             hours += 1;
             minutes -= 60;
         }
+
+        doug.contentment -= i / 2;
+        Mathf.Max(doug.contentment, 0);
+
+        doug.hunger += i / 2;
+        Mathf.Min(doug.hunger, 100);
+
+        doug.loneliness += i / 2;
+        Mathf.Min(doug.loneliness, 100);
+
+        doug.bathroom += i / 2;
+        Mathf.Min(doug.bathroom, 100);
     }
 
     void updateTime(bool i, bool h)
@@ -37,7 +52,7 @@ public class GameTime : MonoBehaviour
         }
         if (h)
         {
-            hours += 1;
+            incrementTime(60);
             if(hours > 12)
             {
                 if (am)

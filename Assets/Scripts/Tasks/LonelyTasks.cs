@@ -1,13 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Panda;
 
 public class LonelyTasks : MonoBehaviour
 {
+    Dog doug;
+    private bool at_work;
+
     //Lonely
-    void goingToWork()
+    public void goingToWork()
     {
-        print("Doug watches you leave for work.");
+        if (doug.loneliness <= 50) {
+            Debug.Log("Doug watches you leave for work.");
+        } else {
+            Debug.Log("Doug whines as you leave for work.");
+        }
+        doug.goToWork();
     }
 
     void nuzzle()
@@ -28,12 +37,12 @@ public class LonelyTasks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        doug = GetComponent<Dog>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        at_work = false;
     }
 }

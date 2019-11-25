@@ -1,14 +1,31 @@
 tree("Root")
-	Succeed
+	race
+		tree "Tired"
+		tree "Hungry"
+		tree "Lonely"
+		tree "Play"
+		tree "Out"
+		tree "Noise"
+
 tree("Tired")
-	Succeed
+	race
+		sleepy()
+		sequence
+			sleep()
+			Wait 5.0
+			wake()
+
 tree("Hungry")
-	Succeed
+	Fail
+
 tree("Lonely")	
-	Succeed
+	Fail
+
 tree("Play")
-	Succeed
+	Fail
+
 tree("Out")
-	Succeed
+	Fail
+
 tree("Noise")
-	Succeed
+	Fail
