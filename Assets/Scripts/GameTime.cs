@@ -44,7 +44,7 @@ public class GameTime : MonoBehaviour
         doug.bathroom = Mathf.Min(doug.bathroom, 100);
     }
 
-    void updateTime(bool i, bool h)
+    public void updateTime(bool i, bool h)
     {
         if (i)
         {
