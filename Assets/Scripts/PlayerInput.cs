@@ -65,14 +65,15 @@ public class PlayerInput : MonoBehaviour
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");
-                        clock.updateTime(true, false);
+                        clock.updateTime(0);
                         return;
                     case 'h':
                         Debug.Log("Wait one hour");
-                        clock.updateTime(false, true);
+                        clock.updateTime(1);
                         return;
                     case 'd':
                         Debug.Log("Wait one day");
+                        clock.updateTime(2);
                         return;
                     case 's':
                         Debug.Log("Played a strange sound");

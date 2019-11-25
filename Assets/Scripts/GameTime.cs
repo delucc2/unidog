@@ -44,29 +44,42 @@ public class GameTime : MonoBehaviour
         doug.bathroom = Mathf.Min(doug.bathroom, 100);
     }
 
-    public void updateTime(bool i, bool h)
+    public void updateTime(int i)
     {
-        if (i)
+        if (i == 0)
         {
             incrementTime(15);
         }
-        if (h)
+        if (i == 1)
         {
             incrementTime(60);
-            if(hours > 12)
+        }
+        if (i == 2)
+        {
+            while(hours != 7 || am == false || minutes != 0)
             {
-                if (am)
-                {
-                    am = false;
-                    AMPM = "PM";
-                }
-                else
-                {
-                    am = true;
-                    AMPM = "AM";
-                }
-                hours = 1;
+                incrementTime(15);
+                checkHours();
             }
+        }
+        checkHours();
+    }
+
+    void checkHours()
+    {
+        if (hours > 12)
+        {
+            if (am)
+            {
+                am = false;
+                AMPM = "PM";
+            }
+            else
+            {
+                am = true;
+                AMPM = "AM";
+            }
+            hours = 1;
         }
     }
 
