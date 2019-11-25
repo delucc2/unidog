@@ -19,7 +19,7 @@ public class DogTasks : MonoBehaviour
         }
         else
         {
-            print("Doug growls at the noise breifly, but then returns to his original state")
+            print("Doug growls at the noise breifly, but then returns to his original state");
         }
     }
 
