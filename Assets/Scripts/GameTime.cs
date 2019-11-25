@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour
 {
-    int hours;
+    public int hours;
     int minutes;
     string currTime;
     string AMPM = "AM";
-    bool am = true;
+    public bool am = true;
     public Text CanvasArea;
     Dog doug;
     
