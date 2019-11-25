@@ -49,7 +49,7 @@ public class DogTasks : MonoBehaviour
         print("Doug wags his tail and smiles with his mouth open, laying face up.");
     }
 
-    void Walk()
+    void house()
     {
         print("Doug runs back into the house.");
     }
@@ -59,7 +59,56 @@ public class DogTasks : MonoBehaviour
         print("Doug tackles you as you open the door, licking your face and running around you.");
     }
 
+    //Negative Reactions 
+    void Ignore()
+    {
+        print("Doug ignores you.");
+    }
 
+    void WalkAway()
+    {
+        print("Doug walks away from you and goes to another room.");
+    }
+
+    void bark()
+    {
+        print("Doug barks at you.");
+    }
+
+    void whine()
+    {
+        print("Doug whines at you.");
+    }
+
+    void laydown()
+    {
+        print("Doug lays down on the floor.");
+    }
+
+    void sit()
+    {
+        print("Doug sits on the floor.");
+    }
+
+    void scratch()
+    {
+        print("Doug scratches himself");
+    }
+
+    void look()
+    {
+        print("Doug looks at you.");
+    }
+
+    void wake()
+    {
+        print("Doug wakes up.");
+    }
+
+    void yawn()
+    {
+        print("Doug yawns.");
+    }
 
     // Start is called before the first frame update
     void Start()
