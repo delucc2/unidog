@@ -31,17 +31,17 @@ public class GameTime : MonoBehaviour
             minutes -= 60;
         }
 
-        doug.contentment -= i / 2;
-        Mathf.Max(doug.contentment, 0);
+        doug.contentment -= i / 6;
+        doug.contentment = Mathf.Max(doug.contentment, 0);
 
-        doug.hunger += i / 2;
-        Mathf.Min(doug.hunger, 100);
+        doug.hunger += i / 6;
+        doug.hunger = Mathf.Min(doug.hunger, 100);
 
-        doug.loneliness += i / 2;
-        Mathf.Min(doug.loneliness, 100);
+        doug.loneliness += i / 4;
+        doug.loneliness = Mathf.Min(doug.loneliness, 100);
 
-        doug.bathroom += i / 2;
-        Mathf.Min(doug.bathroom, 100);
+        doug.bathroom += i / 3;
+        doug.bathroom = Mathf.Min(doug.bathroom, 100);
     }
 
     void updateTime(bool i, bool h)
