@@ -898,7 +898,7 @@ MonoBehaviour:
   - isFoldout: 1
     breakPoints: 
     breakPointStatuses: 
-    collapsedLines: 0400000006000000080000000c0000000e0000000f000000110000001300000002000000010000001200000015000000180000001b0000001e000000
+    collapsedLines: 0400000006000000080000000c0000000e0000000f0000001100000013000000020000001e0000001b0000001800000015000000120000000b0000000a00000001000000
     btScript: 
 --- !u!114 &1041394867
 MonoBehaviour:
@@ -1935,7 +1935,7 @@ GameObject:
   - component: {fileID: 2124843237}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
