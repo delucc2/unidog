@@ -65,11 +65,11 @@ public class PlayerInput : MonoBehaviour
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");
-                        clock.incrementTime(15);
+                        clock.updateTime(true, false);
                         return;
                     case 'h':
                         Debug.Log("Wait one hour");
-                        clock.incrementTime(60);
+                        clock.updateTime(false, true);
                         return;
                     case 'd':
                         Debug.Log("Wait one day");
