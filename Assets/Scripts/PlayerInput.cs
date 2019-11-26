@@ -52,6 +52,7 @@ public class PlayerInput : MonoBehaviour
                         if (!work)
                         {
                             Debug.Log("Gave Doug a treat");
+                            doug.setTreat();
                             clock.updateTime(0);
                         }
                         else
@@ -75,6 +76,7 @@ public class PlayerInput : MonoBehaviour
                         {
                             Debug.Log("Pet Doug");
                             clock.updateTime(0);
+                            lonely.getPets();
                         }
                         else
                         {
@@ -86,6 +88,7 @@ public class PlayerInput : MonoBehaviour
                         {
                             Debug.Log("Rubbed Doug's belly");
                             clock.updateTime(0);
+                            lonely.getBellyRubs();
                         }
                         else
                         {

@@ -1,25 +1,21 @@
 tree("Root")
 	race
-		tree "Tired"
-		tree "Hungry"
-		tree "Lonely"
-		tree "Play"
-		tree "Out"
-		tree "Noise"
-
-tree("Tired")
-	race
 		sleepy()
 		sequence
 			sleep()
 			Wait 5.0
 			wake()
-
-tree("Hungry")
-	Fail
-
-tree("Lonely")	
-	Fail
+		sequence
+			dogDish()
+			eat()
+		sequence
+			beg()
+			treat()
+		bother()
+		nuzzle()
+		tree "Play"
+		tree "Out"
+		tree "Noise"
 
 tree("Play")
 	Fail

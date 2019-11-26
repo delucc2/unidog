@@ -20,23 +20,45 @@ public class LonelyTasks : MonoBehaviour
         doug.goToWork();
     }
 
+    [Task]
     void nuzzle()
     {
-        doug.Loneliness(-40);
-        doug.Contentment(30);
-        print("Doug nuzzles you.");
+        if (!doug.atWork() && doug.loneliness >= 33 && doug.fatigue >= 66) {
+            doug.Loneliness(-40);
+            doug.Contentment(30);
+            print("Doug nuzzles you.");
+            Task.current.Succeed();
+        } else {
+            Task.current.Fail();
+        }
     }
 
-    void enjoyingPets()
+    public void getPets()
     {
-        doug.Loneliness(-20);
-        doug.Contentment(10);
-        print("Doug wags his tail.");
+        if (doug.contentment <= 80 && doug.enjoyingPets()) {
+            doug.Loneliness(-20);
+            doug.Contentment(10);
+            print("Doug wags his tail.");
+        } else if (doug.enjoyingPets()) {
+            print("Doug abruptly runs away.");
+            doug.noMorePets();
+        } else {
+            print("Doug moves his head away from your hand");
+        }
     }
 
-    void enoughPets()
+    public void getBellyRubs()
     {
-        print("Doug abruptly runs away.");
+        if (doug.contentment <= 75 && doug.enjoyingBellyRubs()) {
+            doug.Loneliness(-30);
+            doug.Contentment(25);
+            print("Doug lays on his back for some glorious belly rubs");
+        } else if (doug.enjoyingBellyRubs()) {
+            print("Doug rolls back over, thoroughly satisfied");
+            doug.noMoreBellyRubs();
+        } else {
+            print("Doug refuses to succumb to the belly rubs");
+        }
     }
 
     // Start is called before the first frame update
@@ -48,6 +70,6 @@ public class LonelyTasks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        at_work = false;
+        //at_work = false;
     }
 }

@@ -12,7 +12,7 @@ public class TiredTasks : MonoBehaviour
     [Task]
     public void sleepy()
     {
-        if (!is_sleepy && doug.fatigue >= 75) {
+        if (!is_sleepy && doug.fatigue >= 75 && doug.fatigue < 100) {
             Debug.Log("Doug is sleepy.");
             is_sleepy = true;
             Task.current.Succeed();
@@ -24,7 +24,7 @@ public class TiredTasks : MonoBehaviour
     [Task]
     public void sleep()
     {
-        if (is_sleepy && doug.fatigue >= 100)
+        if (!doug.isPlaying() && is_sleepy && doug.fatigue >= 100)
         {
             Debug.Log("Doug goes to sleep.");
             Task.current.Succeed();
