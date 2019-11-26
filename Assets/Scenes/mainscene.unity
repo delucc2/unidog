@@ -912,11 +912,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edbbf2e67fe4544fab54dcb3fcdf27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hunger: 0
-  loneliness: 0
+  hunger: 75
+  loneliness: 30
   fatigue: 0
-  contentment: 100
-  bathroom: 0
+  contentment: 25
+  bathroom: 10
   minSize: 2.5
   maxSize: 25
   hungerImg: {fileID: 2146848901}
@@ -982,6 +982,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43d2f22a869d504fb5a4b5dd2b400f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1041394874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ef5a41c4efd694f8c30837e5dd75fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1084310727

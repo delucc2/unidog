@@ -1,7 +1,7 @@
 tree("Root")
 	race
-		sleepy()
 		sequence
+			sleepy()
 			sleep()
 			Wait 5.0
 			wake()
@@ -17,15 +17,10 @@ tree("Root")
 			wantToPlay()
 			getReadyForFetch()
 			fetch()
+		Need()
+		wantsWalk()
 		sequence
-			Need()
-			toilet()
-		sequence
-			wantsWalk()
 			walk()
+			toilet()
 			Wait 5.0
 			returnHome()
-		tree "Noise"
-
-tree("Noise")
-	Fail

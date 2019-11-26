@@ -12,7 +12,7 @@ public class HungryTasks : MonoBehaviour
     [Task]
     void dogDish()
     {
-        if (doug.hunger >= 100) {
+        if (doug.hunger >= 75) {
             print("Doug goes to the dog dish and waits.");
             Task.current.Succeed();
         } else {
@@ -23,7 +23,7 @@ public class HungryTasks : MonoBehaviour
     [Task]
     void bother()
     {
-        if (doug.hunger >= 50 && !bothered) {
+        if (doug.hunger >= 50 && doug.hunger < 75 && !bothered) {
             print("Doug bothers you.");
             bothered = true;
             Invoke("unbothered", 60);
@@ -38,12 +38,13 @@ public class HungryTasks : MonoBehaviour
     [Task]
     void beg()
     {
-        if (doug.contentment >= 75 && doug.hunger >= 50 && doug.hunger < 75) {
+        if (doug.contentment >= 75 && doug.hunger >= 50 && doug.hunger < 75 && doug.treated()) {
+            print("Doug notices a treat laying out.");
+            Task.current.Succeed();
+        } else if (doug.contentment >= 75 && doug.hunger >= 50 && doug.hunger < 75) {
             print("Doug begs for a treat.");
             Task.current.Succeed();
-        } else if (doug.hunger >= 75) {
-            print("Doug is sad he was denied a treat.");
-            doug.Contentment(-20);
+        } else {
             Task.current.Fail();
         }
     }
@@ -58,6 +59,10 @@ public class HungryTasks : MonoBehaviour
             print("Doug snacks on a treat");
             doug.eatTreat();
             Task.current.Succeed();
+        } else if (doug.hunger >= 75) {
+            print("Doug is said he was denied a treat.");
+            doug.Contentment(-20);
+            Task.current.Fail();
         }
     }
 
@@ -68,6 +73,7 @@ public class HungryTasks : MonoBehaviour
             doug.Hunger(-100);
             doug.Bathroom(20);
             print("Doug eats his food.");
+            doug.eatFoodBowl();
             Task.current.Succeed();
         }
     }

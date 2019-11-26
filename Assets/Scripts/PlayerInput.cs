@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     PlayTasks play;
     HungryTasks hungry;
     GoOutTasks go_out;
+    DogTasks generic_tasks;
 
     private bool work = false;
 
@@ -25,6 +26,7 @@ public class PlayerInput : MonoBehaviour
         play = doug.GetComponent<PlayTasks>();
         hungry = doug.GetComponent<HungryTasks>();
         go_out = doug.GetComponent<GoOutTasks>();
+        generic_tasks = doug.GetComponent<DogTasks>();
     }
 
     // Update is called once per frame
@@ -100,7 +102,6 @@ public class PlayerInput : MonoBehaviour
                         {
                             Debug.Log("Took Doug for a walk");
                             doug.onAWalk();
-                            go_out.goForWalk();
                             clock.updateTime(0);
                         }
                         else
@@ -159,6 +160,7 @@ public class PlayerInput : MonoBehaviour
                     case 's':
                         Debug.Log("Played a strange sound");
                         clock.updateTime(0);
+                        generic_tasks.Noise();
                         return;
                     default:
                         return;

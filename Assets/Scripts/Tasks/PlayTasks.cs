@@ -6,11 +6,12 @@ using Panda;
 public class PlayTasks : MonoBehaviour
 {
     Dog doug;
+
     //Play
     [Task]
     void wantToPlay()
     {
-        if (doug.fatigue <= 25 && doug.contentment <= 50) {
+        if (doug.fatigue <= 25 && doug.contentment <= 50 && doug.hunger < 75 && !doug.wantsToPlay()) {
             print("Doug jumps around expectingly.");
             doug.readyToPlay();
             Task.current.Succeed();
