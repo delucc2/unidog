@@ -48,6 +48,9 @@ public class Dog : MonoBehaviour
         at_work = false;
     }
 
+    //Only the dog can change its own stats
+    //The dog may not accept the actions of the payer so the stat changes should reflect this
+
     public void Hunger(float i)
     {
         hunger += i;
