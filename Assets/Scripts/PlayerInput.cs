@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour
     HungryTasks hungry;
     GoOutTasks go_out;
 
+    private bool work = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,13 +66,21 @@ public class PlayerInput : MonoBehaviour
                         clock.updateTime(0);
                         return;
                     case 'g':
-                        Debug.Log("Went to work");
-                        clock.updateTime(0);
-                        lonely.goingToWork();
+                        if (!work)
+                        {
+                            Debug.Log("Went to work");
+                            work = true;
+                            clock.updateTime(0);
+                            lonely.goingToWork();
+                        }
                         return;
                     case 'a':
-                        Debug.Log("Return home from work");
-                        clock.updateTime(0);
+                        if (work)
+                        {
+                            Debug.Log("Return home from work");
+                            work = false;
+                            clock.updateTime(0);
+                        }
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");
