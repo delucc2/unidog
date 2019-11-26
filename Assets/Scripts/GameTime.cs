@@ -34,6 +34,9 @@ public class GameTime : MonoBehaviour
         doug.contentment -= i / 6;
         doug.contentment = Mathf.Max(doug.contentment, 0);
 
+        doug.fatigue -= i / 8;
+        doug.fatigue = Mathf.Max(doug.fatigue, 0);
+
         doug.hunger += i / 6;
         doug.hunger = Mathf.Min(doug.hunger, 100);
 
