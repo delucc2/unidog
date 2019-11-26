@@ -924,6 +924,18 @@ MonoBehaviour:
   fatigueImg: {fileID: 1757105264}
   contentImg: {fileID: 473331477}
   bathroomImg: {fileID: 894709633}
+--- !u!114 &1041394868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3728d49cb9413eb44906d202a1053585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1041394869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +946,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24e6df08bd3990d47ab44569f2199d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1041394870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1c0fda5c8205c4eba3f7eb9a8f78f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1041394871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e8102f9a420584aa513a36b48ad495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1041394872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041394865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43d2f22a869d504fb5a4b5dd2b400f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1084310727
@@ -1978,6 +2026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac13d9a38ed29c0468fbca7ef7ce8ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hours: 0
+  am: 1
   CanvasArea: {fileID: 336566190}
 --- !u!1 &2146848901
 GameObject:
