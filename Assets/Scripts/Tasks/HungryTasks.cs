@@ -21,9 +21,16 @@ public class HungryTasks : MonoBehaviour
         print("Doug begs for a treat.");
     }
 
+    void treat()
+    {
+        doug.Hunger(-20);
+        doug.Bathroom(5);
+        print("Doug snacks on a treat");
+    }
+
     void eat()
     {
-        doug.Hunger(-50);
+        doug.Hunger(-100);
         doug.Bathroom(20);
         print("Doug eats his food.");
     }
