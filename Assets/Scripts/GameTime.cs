@@ -43,7 +43,7 @@ public class GameTime : MonoBehaviour
         doug.loneliness += i / 4;
         doug.loneliness = Mathf.Min(doug.loneliness, 100);
 
-        doug.bathroom += i / 3;
+        doug.bathroom += i / 6;
         doug.bathroom = Mathf.Min(doug.bathroom, 100);
     }
 
