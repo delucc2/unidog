@@ -13,6 +13,10 @@ tree("Root")
 			treat()
 		bother()
 		nuzzle()
+		sequence
+			wantsToPlay()
+			getReadyForFetch()
+			while fetch()
 		tree "Play"
 		tree "Out"
 		tree "Noise"

@@ -27,6 +27,8 @@ public class Dog : MonoBehaviour
     private bool enjoying_pets = true;
     private bool enjoying_bellyrubs = true;
     private bool treat = false;
+    private bool on_a_walk = false;
+    private bool wants_to_play = false;
 
     public bool foodBowl() { return food_bowl; }
     public bool isPlaying() { return is_playing; }
@@ -34,6 +36,8 @@ public class Dog : MonoBehaviour
     public bool enjoyingPets() { return enjoying_pets; }
     public bool enjoyingBellyRubs() { return enjoying_bellyrubs; }
     public bool treated() { return treat; }
+    public bool onAWalk() { return on_a_walk; }
+    public bool wantsToPlay() { return wants_to_play; }
 
     public void fillFoodBowl() { food_bowl = true; }
     public void eatFoodBowl() { food_bowl = false; }
@@ -49,6 +53,12 @@ public class Dog : MonoBehaviour
 
     public void setTreat() { treat = true; }
     public void eatTreat() { treat = false; }
+
+    public void goForWalk() { on_a_walk = true; }
+    public void returnFromWalk() { on_a_walk = false; }
+
+    public void readyToPlay() { wants_to_play = true; }
+    public void donePlaying() { wants_to_play = false; }
 
     //Only the dog can change its own stats
     //The dog may not accept the actions of the payer so the stat changes should reflect this
