@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour
     HungryTasks hungry;
     GoOutTasks go_out;
 
+    private bool work = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,42 +37,107 @@ public class PlayerInput : MonoBehaviour
                 switch (a)
                 {
                     case 'f':
-                        Debug.Log("Put food in Doug's bowl");
-                        doug.fillFoodBowl();
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Put food in Doug's bowl");
+                            doug.fillFoodBowl();
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 't':
-                        Debug.Log("Gave Doug a treat");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Gave Doug a treat");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'k':
-                        Debug.Log("Threw the stick past Doug");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Threw the stick past Doug");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'p':
-                        Debug.Log("Pet Doug");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Pet Doug");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'b':
-                        Debug.Log("Rubbed Doug's belly");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Rubbed Doug's belly");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'w':
-                        Debug.Log("Took Doug for a walk");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Took Doug for a walk");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'l':
-                        Debug.Log("Left Doug alone");
-                        clock.updateTime(0);
+                        if (!work)
+                        {
+                            Debug.Log("Left Doug alone");
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I can't do that, I'm at work");
+                        }
                         return;
                     case 'g':
-                        Debug.Log("Went to work");
-                        clock.updateTime(0);
-                        lonely.goingToWork();
+                        if (!work)
+                        {
+                            Debug.Log("Went to work");
+                            work = true;
+                            clock.updateTime(0);
+                            lonely.goingToWork();
+                        }
+                        else
+                        {
+                            Debug.Log("I'm already at work");
+                        }
                         return;
                     case 'a':
-                        Debug.Log("Return home from work");
-                        clock.updateTime(0);
+                        if (work)
+                        {
+                            Debug.Log("Return home from work");
+                            work = false;
+                            clock.updateTime(0);
+                        }
+                        else
+                        {
+                            Debug.Log("I'm already home");
+                        }
                         return;
                     case 'i':
                         Debug.Log("Wait fifteen minutes");

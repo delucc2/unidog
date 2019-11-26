@@ -59,6 +59,11 @@ public class GameTime : MonoBehaviour
         }
         if (i == 2)
         {
+            if(hours == 7 && am == true && minutes == 0)
+            {
+                incrementTime(15);
+                checkHours();
+            }
             while(hours != 7 || am == false || minutes != 0)
             {
                 incrementTime(15);
