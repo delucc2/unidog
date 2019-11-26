@@ -14,18 +14,18 @@ tree("Root")
 		bother()
 		nuzzle()
 		sequence
-			wantsToPlay()
+			wantToPlay()
 			getReadyForFetch()
-			while fetch()
-		tree "Play"
-		tree "Out"
+			fetch()
+		sequence
+			Need()
+			toilet()
+		sequence
+			wantsWalk()
+			walk()
+			Wait 5.0
+			returnHome()
 		tree "Noise"
-
-tree("Play")
-	Fail
-
-tree("Out")
-	Fail
 
 tree("Noise")
 	Fail

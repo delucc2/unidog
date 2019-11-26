@@ -38,10 +38,12 @@ public class HungryTasks : MonoBehaviour
     [Task]
     void beg()
     {
-        if (doug.contentment >= 75 && doug.hunger >= 75) {
+        if (doug.contentment >= 75 && doug.hunger >= 50 && doug.hunger < 75) {
             print("Doug begs for a treat.");
             Task.current.Succeed();
-        } else {
+        } else if (doug.hunger >= 75) {
+            print("Doug is sad he was denied a treat.");
+            doug.Contentment(-20);
             Task.current.Fail();
         }
     }

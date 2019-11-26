@@ -99,6 +99,8 @@ public class PlayerInput : MonoBehaviour
                         if (!work)
                         {
                             Debug.Log("Took Doug for a walk");
+                            doug.onAWalk();
+                            go_out.goForWalk();
                             clock.updateTime(0);
                         }
                         else

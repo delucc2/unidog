@@ -33,10 +33,9 @@ public class PlayTasks : MonoBehaviour
             doug.Contentment(20);
             doug.Fatigue(25);
             print("Doug runs after the stick, coming back with it in his mouth.");
-            Task.current.Succeed();
         } else if (Input.GetKeyDown(KeyCode.K)) {
             print("Doug looks at the stick flying away and back at you.");
-            Task.current.Fail();
+            Task.current.Succeed();
         }
     }
 
