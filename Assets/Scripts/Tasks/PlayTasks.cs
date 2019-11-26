@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayTasks : MonoBehaviour
 {
+    Dog doug;
     //Play
     void wantToPlay()
     {
@@ -17,6 +18,8 @@ public class PlayTasks : MonoBehaviour
 
     void fetch()
     {
+        doug.Loneliness(-20);
+        doug.Fatigue(25);
         print("Doug runs after the stick, coming back with it in his mouth.");
     }
 
@@ -28,7 +31,7 @@ public class PlayTasks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        doug = GetComponent<Dog>();
     }
 
     // Update is called once per frame

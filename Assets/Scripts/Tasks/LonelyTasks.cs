@@ -14,6 +14,7 @@ public class LonelyTasks : MonoBehaviour
         if (doug.loneliness <= 50) {
             Debug.Log("Doug watches you leave for work.");
         } else {
+            doug.Loneliness(-10);
             Debug.Log("Doug whines as you leave for work.");
         }
         doug.goToWork();
@@ -21,11 +22,15 @@ public class LonelyTasks : MonoBehaviour
 
     void nuzzle()
     {
+        doug.Loneliness(-40);
+        doug.Contentment(30);
         print("Doug nuzzles you.");
     }
 
     void enjoyingPets()
     {
+        doug.Loneliness(-20);
+        doug.Contentment(10);
         print("Doug wags his tail.");
     }
 

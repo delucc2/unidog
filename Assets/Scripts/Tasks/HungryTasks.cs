@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HungryTasks : MonoBehaviour
 {
+    Dog doug;
     //Hungry
     void dogDish()
     {
@@ -22,13 +23,14 @@ public class HungryTasks : MonoBehaviour
 
     void eat()
     {
+        doug.Hunger(-50);
+        doug.Bathroom(20);
         print("Doug eats his food.");
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        doug = GetComponent<Dog>();
     }
 
     // Update is called once per frame

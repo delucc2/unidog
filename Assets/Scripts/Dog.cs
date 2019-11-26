@@ -47,4 +47,35 @@ public class Dog : MonoBehaviour
     {
         at_work = false;
     }
+
+    public void Hunger(float i)
+    {
+        hunger += i;
+        hunger = Mathf.Max(i, 0);
+        hunger = Mathf.Min(i, 100);
+    }
+    public void Loneliness(float i)
+    {
+        loneliness += i;
+        loneliness = Mathf.Max(i, 0);
+        loneliness = Mathf.Min(i, 100);
+    }
+    public void Fatigue(float i)
+    {
+        fatigue += i;
+        fatigue = Mathf.Max(i, 0);
+        fatigue = Mathf.Min(i, 100);
+    }
+    public void Contentment(float i)
+    {
+        contentment += i;
+        contentment = Mathf.Max(i, 0);
+        contentment = Mathf.Min(i, 100);
+    }
+    public void Bathroom(float i)
+    {
+        bathroom += i;
+        bathroom = Mathf.Max(i, 0);
+        bathroom = Mathf.Min(i, 100);
+    }
 }
